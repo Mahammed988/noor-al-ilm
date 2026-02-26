@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Menu, X, Search, Moon, Sun } from "lucide-react";
+import { LanguageSelector } from "./LanguageSelector";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -56,6 +57,8 @@ export default function Header() {
 
           {/* Actions */}
           <div className="flex items-center space-x-4">
+            <LanguageSelector />
+            
             {mounted && (
               <button
                 onClick={toggleTheme}
