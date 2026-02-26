@@ -3,11 +3,11 @@
 import { notFound } from "next/navigation";
 import { BookOpen, Lightbulb, Heart } from "lucide-react";
 import { useLanguage } from "@/components/LanguageSelector";
-import { getAllExpandedSurahs } from "@/lib/data/expanded-surahs";
+import { getAllSurahs } from "@/lib/data/complete-surahs";
 
 export default function SurahPage({ params }: { params: { id: string } }) {
   const language = useLanguage();
-  const allSurahs = getAllExpandedSurahs();
+  const allSurahs = getAllSurahs();
   const surah = allSurahs.find(s => s.number === parseInt(params.id));
 
   if (!surah) {

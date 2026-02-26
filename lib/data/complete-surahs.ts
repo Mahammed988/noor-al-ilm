@@ -56,14 +56,12 @@ export const completeSurahs: CompleteSurah[] = [
       { en: "Faith and belief", om: "Amantii fi iman" },
       { en: "Laws and commandments", om: "Seeraa fi ajaja" },
       { en: "Stories of previous nations", om: "Seenaa saboota darbanii" },
-      { en: "Guidance for believers", om: "Qajeelfama amantoota" },
-      { en: "Importance of prayer and charity", om: "Barbaachisummaa salaataa fi sadaqaa" }
+      { en: "Guidance for believers", om: "Qajeelfama amantoota" }
     ],
     keyLessons: [
       { en: "Believe in the unseen", om: "Waan hin mul'anne amani" },
       { en: "Establish regular prayer", om: "Salaata yeroo yeroon hundeessi" },
-      { en: "Spend in charity", om: "Sadaqaa kenni" },
-      { en: "Learn from past nations", om: "Saboota darbanii irraa baradhu" }
+      { en: "Spend in charity", om: "Sadaqaa kenni" }
     ]
   },
   {
@@ -80,14 +78,11 @@ export const completeSurahs: CompleteSurah[] = [
     themes: [
       { en: "Story of Mary and Jesus", om: "Seenaa Maryam fi Isa" },
       { en: "Unity of believers", om: "Tokkummaa amantoota" },
-      { en: "Lessons from Battle of Uhud", om: "Barnoota Lola Uhud irraa" },
-      { en: "Patience in trials", om: "Obsaan qormaata keessatti" },
-      { en: "Trust in Allah", om: "Rabbitti amanachuu" }
+      { en: "Lessons from Battle of Uhud", om: "Barnoota Lola Uhud irraa" }
     ],
     keyLessons: [
       { en: "Hold fast to Allah's rope", om: "Funyoo Rabbii jabeessitii qabadhu" },
       { en: "Be patient in adversity", om: "Rakkina keessatti obsa" },
-      { en: "Learn from defeats", om: "Moʼatamuu irraa baradhu" },
       { en: "Maintain unity", om: "Tokkummaa eegi" }
     ]
   },
@@ -105,15 +100,11 @@ export const completeSurahs: CompleteSurah[] = [
     themes: [
       { en: "Women's rights", om: "Mirga dubartootaa" },
       { en: "Family law", om: "Seera maatii" },
-      { en: "Inheritance rules", om: "Seera dhaala" },
-      { en: "Marriage guidance", om: "Qajeelfama gaa'elaa" },
-      { en: "Social justice", om: "Haqummaa hawaasaa" }
+      { en: "Inheritance rules", om: "Seera dhaala" }
     ],
     keyLessons: [
       { en: "Treat women with justice", om: "Dubartoonni haqaan wal qunnamsiisi" },
-      { en: "Fulfill orphans' rights", om: "Mirga ijoollee abbaa hin qabnee guuti" },
-      { en: "Be fair in inheritance", om: "Dhaala keessatti haqaan hojjedhu" },
-      { en: "Maintain family ties", om: "Hidhaa maatii eegi" }
+      { en: "Fulfill orphans' rights", om: "Mirga ijoollee abbaa hin qabnee guuti" }
     ]
   },
   {
@@ -129,15 +120,11 @@ export const completeSurahs: CompleteSurah[] = [
     },
     themes: [
       { en: "Halal and Haram", om: "Halaalaa fi Haraamaa" },
-      { en: "Fulfilling contracts", om: "Waliigaltee guutuu" },
-      { en: "Story of the disciples", om: "Seenaa barattootaa" },
-      { en: "Justice in judgment", om: "Haqummaa murtii keessatti" }
+      { en: "Fulfilling contracts", om: "Waliigaltee guutuu" }
     ],
     keyLessons: [
       { en: "Fulfill your promises", om: "Waadaa kee guuti" },
-      { en: "Eat only what is lawful", om: "Waan hayyamame qofa nyaadhu" },
-      { en: "Judge with justice", om: "Haqaan murteessi" },
-      { en: "Be grateful for blessings", om: "Eebba Rabbiitiif galateeffadhu" }
+      { en: "Eat only what is lawful", om: "Waan hayyamame qofa nyaadhu" }
     ]
   }
 ];

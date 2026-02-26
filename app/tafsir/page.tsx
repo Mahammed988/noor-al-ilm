@@ -3,11 +3,11 @@
 import Link from "next/link";
 import { BookOpen, ChevronRight } from "lucide-react";
 import { useLanguage } from "@/components/LanguageSelector";
-import { getAllExpandedSurahs } from "@/lib/data/expanded-surahs";
+import { getAllSurahs } from "@/lib/data/complete-surahs";
 
 export default function TafsirPage() {
   const language = useLanguage();
-  const surahs = getAllExpandedSurahs();
+  const surahs = getAllSurahs();
 
   return (
     <div className="min-h-screen py-12">
