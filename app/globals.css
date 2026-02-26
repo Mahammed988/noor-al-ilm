@@ -1,26 +1,91 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-background: oklch(98% 0.02 250);
+  --color-foreground: oklch(25% 0.05 160);
+  --color-card: oklch(100% 0 0);
+  --color-card-foreground: oklch(25% 0.05 160);
+  --color-primary: oklch(45% 0.15 160);
+  --color-primary-foreground: oklch(100% 0 0);
+  --color-secondary: oklch(85% 0.08 35);
+  --color-secondary-foreground: oklch(25% 0.05 160);
+  --color-accent: oklch(55% 0.15 220);
+  --color-accent-foreground: oklch(100% 0 0);
+  --color-muted: oklch(92% 0.04 35);
+  --color-muted-foreground: oklch(50% 0.04 160);
+  --color-border: oklch(85% 0.04 35);
+  
+  --radius: 0.5rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --color-background: oklch(15% 0.05 160);
+  --color-foreground: oklch(92% 0.04 35);
+  --color-card: oklch(20% 0.04 160);
+  --color-card-foreground: oklch(92% 0.04 35);
+  --color-primary: oklch(55% 0.12 160);
+  --color-primary-foreground: oklch(100% 0 0);
+  --color-secondary: oklch(25% 0.03 160);
+  --color-secondary-foreground: oklch(92% 0.04 35);
+  --color-accent: oklch(65% 0.13 220);
+  --color-accent-foreground: oklch(100% 0 0);
+  --color-muted: oklch(22% 0.03 160);
+  --color-muted-foreground: oklch(70% 0.03 35);
+  --color-border: oklch(28% 0.03 160);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-background text-foreground;
+  font-family: var(--font-inter), sans-serif;
+}
+
+.arabic-text {
+  font-family: var(--font-amiri), serif;
+  direction: rtl;
+  text-align: right;
+}
+
+@layer utilities {
+  .pattern-dots {
+    background-image: radial-gradient(circle, hsl(var(--primary) / 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  .pattern-islamic {
+    background-image: 
+      linear-gradient(45deg, hsl(var(--primary) / 0.05) 25%, transparent 25%),
+      linear-gradient(-45deg, hsl(var(--primary) / 0.05) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, hsl(var(--primary) / 0.05) 75%),
+      linear-gradient(-45deg, transparent 75%, hsl(var(--primary) / 0.05) 75%);
+    background-size: 40px 40px;
+    background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+  }
+}
+
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-inter), sans-serif;
+}
+
+.arabic-text {
+  font-family: var(--font-amiri), serif;
+  direction: rtl;
+  text-align: right;
+}
+
+.pattern-dots {
+  background-image: radial-gradient(circle, color-mix(in oklch, var(--color-primary) 10%, transparent) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.pattern-islamic {
+  background-image: 
+    linear-gradient(45deg, color-mix(in oklch, var(--color-primary) 5%, transparent) 25%, transparent 25%),
+    linear-gradient(-45deg, color-mix(in oklch, var(--color-primary) 5%, transparent) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, color-mix(in oklch, var(--color-primary) 5%, transparent) 75%),
+    linear-gradient(-45deg, transparent 75%, color-mix(in oklch, var(--color-primary) 5%, transparent) 75%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
 }
