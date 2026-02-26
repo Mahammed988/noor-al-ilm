@@ -144,21 +144,12 @@ export const completeSurahs: CompleteSurah[] = [
 
 // Function to get all 114 Surahs (first 5 detailed, rest with basic info)
 export function getAllSurahs(): CompleteSurah[] {
-  const basicSurahs: CompleteSurah[] = [
-    { number: 6, name: "Al-An'am", nameAr: "الأنعام", meaning: { en: "The Cattle", om: "Horii" }, verses: 165, revelationType: "Meccan", summary: { en: "Discusses monotheism and refutes polytheism", om: "Waa'ee Rabbii tokkicha ta'uu fi shirka mormuu dubbata" }, themes: [], keyLessons: [] },
-    { number: 7, name: "Al-A'raf", nameAr: "الأعراف", meaning: { en: "The Heights", om: "Ol'aantoota" }, verses: 206, revelationType: "Meccan", summary: { en: "Stories of prophets and their nations", om: "Seenaa raajotaa fi saboota isaanii" }, themes: [], keyLessons: [] },
-    { number: 8, name: "Al-Anfal", nameAr: "الأنفال", meaning: { en: "The Spoils of War", om: "Boojuu Waraanaa" }, verses: 75, revelationType: "Medinan", summary: { en: "Battle of Badr and war ethics", om: "Lola Badr fi naamusa waraanaa" }, themes: [], keyLessons: [] },
-    { number: 9, name: "At-Tawbah", nameAr: "التوبة", meaning: { en: "The Repentance", om: "Tawbaa" }, verses: 129, revelationType: "Medinan", summary: { en: "Repentance and hypocrites", om: "Tawbaa fi fakkeessitoota" }, themes: [], keyLessons: [] },
-    { number: 10, name: "Yunus", nameAr: "يونس", meaning: { en: "Jonah", om: "Yuunus" }, verses: 109, revelationType: "Meccan", summary: { en: "Story of Prophet Yunus", om: "Seenaa Raajii Yuunus" }, themes: [], keyLessons: [] },
-    // Continue with remaining surahs...
-    { number: 18, name: "Al-Kahf", nameAr: "الكهف", meaning: { en: "The Cave", om: "Holqa" }, verses: 110, revelationType: "Meccan", summary: { en: "Stories of the cave companions and Dhul-Qarnayn", om: "Seenaa hiriyoota holqaa fi Dhul-Qarnayn" }, themes: [], keyLessons: [] },
-    { number: 36, name: "Ya-Sin", nameAr: "يس", meaning: { en: "Ya-Sin", om: "Yaa-Siin" }, verses: 83, revelationType: "Meccan", summary: { en: "The heart of the Quran", om: "Onnee Qur'aanaa" }, themes: [], keyLessons: [] },
-    { number: 55, name: "Ar-Rahman", nameAr: "الرحمن", meaning: { en: "The Most Merciful", om: "Araaraa Guddaa" }, verses: 78, revelationType: "Medinan", summary: { en: "Allah's blessings and mercy", om: "Eebba fi araaraa Rabbii" }, themes: [], keyLessons: [] },
-    { number: 67, name: "Al-Mulk", nameAr: "الملك", meaning: { en: "The Sovereignty", om: "Mootummaa" }, verses: 30, revelationType: "Meccan", summary: { en: "Allah's dominion and power", om: "Aangoo fi humna Rabbii" }, themes: [], keyLessons: [] },
-    { number: 112, name: "Al-Ikhlas", nameAr: "الإخلاص", meaning: { en: "The Sincerity", om: "Qulqullina" }, verses: 4, revelationType: "Meccan", summary: { en: "Pure monotheism", om: "Rabbii tokkicha ta'uu qulqulluu" }, themes: [], keyLessons: [] },
-    { number: 113, name: "Al-Falaq", nameAr: "الفلق", meaning: { en: "The Daybreak", om: "Barii" }, verses: 5, revelationType: "Meccan", summary: { en: "Seeking refuge from evil", om: "Hamaa irraa ittisuu barbaaduu" }, themes: [], keyLessons: [] },
-    { number: 114, name: "An-Nas", nameAr: "الناس", meaning: { en: "Mankind", om: "Namoonni" }, verses: 6, revelationType: "Meccan", summary: { en: "Seeking refuge from whispers", om: "Hasaasa irraa ittisuu barbaaduu" }, themes: [], keyLessons: [] },
-  ];
-
-  return [...completeSurahs, ...basicSurahs];
+  // Import expanded content
+  try {
+    const { getAllExpandedSurahs } = require('./expanded-surahs');
+    return getAllExpandedSurahs();
+  } catch {
+    // Fallback to basic list if expanded file not available
+    return completeSurahs;
+  }
 }
