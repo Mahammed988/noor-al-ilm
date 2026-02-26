@@ -8,7 +8,14 @@ import { getAllSurahs } from "@/lib/data/complete-surahs";
 export default function SurahPage({ params }: { params: { id: string } }) {
   const language = useLanguage();
   const allSurahs = getAllSurahs();
-  const surah = allSurahs.find(s => s.number === parseInt(params.id));
+  const surahNumber = parseInt(params.id);
+  
+  // Validate surah number
+  if (isNaN(surahNumber) || surahNumber < 1 || surahNumber > 114) {
+    notFound();
+  }
+  
+  const surah = allSurahs.find(s => s.number === surahNumber);
 
   if (!surah) {
     notFound();
