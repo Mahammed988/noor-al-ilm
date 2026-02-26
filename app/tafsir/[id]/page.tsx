@@ -6,15 +6,20 @@ import SurahContent from "@/components/SurahContent";
 export const dynamicParams = true;
 
 // Tell Next.js to generate all Surah pages at build time
-export function generateStaticParams() {
+export async function generateStaticParams() {
   return Array.from({ length: 114 }, (_, i) => ({
     id: String(i + 1)
   }));
 }
 
-export default function SurahPage({ params }: { params: { id: string } }) {
+export default async function SurahPage({ 
+  params 
+}: { 
+  params: Promise<{ id: string }> 
+}) {
+  const { id } = await params;
   const allSurahs = getAllSurahs();
-  const surahNumber = parseInt(params.id);
+  const surahNumber = parseInt(id);
   
   // Validate surah number
   if (isNaN(surahNumber) || surahNumber < 1 || surahNumber > 114) {
@@ -28,7 +33,7 @@ export default function SurahPage({ params }: { params: { id: string } }) {
   }
 
   // Sample verses for Al-Fatihah (you can expand this)
-  const sampleVerses = params.id === "1" ? [
+  const sampleVerses = id === "1" ? [
     {
       number: 1,
       arabic: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
