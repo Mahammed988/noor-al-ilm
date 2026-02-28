@@ -2,15 +2,7 @@ import { notFound } from "next/navigation";
 import { getAllSurahs } from "@/lib/data/complete-surahs";
 import SurahContent from "@/components/SurahContent";
 
-// Enable dynamic rendering for routes not pre-generated
-export const dynamicParams = true;
-
-// Tell Next.js to generate all Surah pages at build time
-export async function generateStaticParams() {
-  return Array.from({ length: 114 }, (_, i) => ({
-    id: String(i + 1)
-  }));
-}
+export const dynamic = 'force-dynamic';
 
 export default async function SurahPage({ 
   params 
@@ -32,7 +24,7 @@ export default async function SurahPage({
     notFound();
   }
 
-  // Sample verses for Al-Fatihah (you can expand this)
+  // Sample verses for Al-Fatihah
   const sampleVerses = id === "1" ? [
     {
       number: 1,
