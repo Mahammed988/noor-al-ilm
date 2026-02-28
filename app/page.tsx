@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BookOpen, Book, Moon, Users } from "lucide-react";
+import { BookOpen, Book, Moon, Users, Layers } from "lucide-react";
 
 export default function Home() {
   const features = [
@@ -10,6 +10,14 @@ export default function Home() {
       description: "Explore classical Qur'anic exegesis with structured commentary from Ibn Kathir and Al-Jalalayn",
       href: "/tafsir",
       color: "from-emerald-500 to-teal-600"
+    },
+    {
+      icon: Layers,
+      title: "Juz (Para)",
+      titleAr: "الأجزاء",
+      description: "Browse the Quran by its 30 divisions, perfect for daily recitation and Ramadan completion",
+      href: "/juz",
+      color: "from-cyan-500 to-blue-600"
     },
     {
       icon: Book,
