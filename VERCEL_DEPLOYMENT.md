@@ -19,7 +19,7 @@ Run these commands in your terminal:
 
 ```bash
 # Add GitHub remote (replace YOUR_USERNAME with your GitHub username)
-git remote add origin https://github.com/YOUR_USERNAME/noor-al-ilm.git
+git remote add origin https://github.com/Mahammed988/noor-al-ilms.git
 
 # Push to GitHub
 git branch -M main
