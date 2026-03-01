@@ -1,16 +1,8 @@
 import type { Metadata } from "next";
-import { Amiri, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
-
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const amiri = Amiri({ 
-  weight: ["400", "700"],
-  subsets: ["arabic", "latin"],
-  variable: "--font-amiri"
-});
 
 export const metadata: Metadata = {
   title: "نور العلم - Path of Knowledge | Islamic Learning Platform",
@@ -25,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${amiri.variable} antialiased`}>
+      <body className="antialiased">
         <ThemeProvider>
           <div className="flex flex-col min-h-screen">
             <Header />
