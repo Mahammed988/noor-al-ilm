@@ -26,8 +26,7 @@ export default function Header() {
   };
 
   const navLinks = [
-    { href: "/tafsir", label: "Tafsir", labelAr: "التفسير" },
-    { href: "/juz", label: "Juz", labelAr: "الأجزاء" },
+    { href: "/quran", label: "Quran", labelAr: "القرآن" },
     { href: "/hadith", label: "Hadith", labelAr: "الحديث" },
     { href: "/ramadan", label: "Ramadan", labelAr: "رمضان" },
     { href: "/womens-fiqh", label: "Women's Fiqh", labelAr: "فقه النساء" },
