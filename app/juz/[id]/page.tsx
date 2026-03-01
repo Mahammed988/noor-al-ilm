@@ -3,8 +3,6 @@ import { getJuzByNumber, getAllJuz } from "@/lib/data/juz";
 import { getAllSurahs } from "@/lib/data/complete-surahs";
 import JuzContent from "@/components/JuzContent";
 
-export const dynamic = 'force-dynamic';
-
 export default async function JuzDetailPage({ 
   params 
 }: { 

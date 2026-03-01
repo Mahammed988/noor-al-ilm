@@ -2,8 +2,6 @@ import { notFound } from "next/navigation";
 import { getAllSurahs } from "@/lib/data/complete-surahs";
 import SurahContent from "@/components/SurahContent";
 
-export const dynamic = 'force-dynamic';
-
 export default async function SurahPage({ 
   params 
 }: { 
