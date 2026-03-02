@@ -36,11 +36,11 @@
 
 body {
   @apply bg-background text-foreground;
-  font-family: var(--font-inter), sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
 }
 
 .arabic-text {
-  font-family: var(--font-amiri), serif;
+  font-family: 'Amiri', 'Traditional Arabic', serif;
   direction: rtl;
   text-align: right;
 }
@@ -66,11 +66,11 @@ body {
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
-  font-family: var(--font-inter), sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
 }
 
 .arabic-text {
-  font-family: var(--font-amiri), serif;
+  font-family: 'Amiri', 'Traditional Arabic', serif;
   direction: rtl;
   text-align: right;
 }
